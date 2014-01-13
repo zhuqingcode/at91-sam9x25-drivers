@@ -1,0 +1,1 @@
+cmd_/home/AT91/drivers/flash/at91flash.ko := arm-none-linux-gnueabi-ld -r  -T /home/AT91/linux-2.6.39/scripts/module-common.lds   -o /home/AT91/drivers/flash/at91flash.ko /home/AT91/drivers/flash/at91flash.o /home/AT91/drivers/flash/at91flash.mod.o

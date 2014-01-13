@@ -1,0 +1,14 @@
+TEST_DIR:=/mcuzone/nfsroot/test
+CC := arm-none-linux-gnueabi-gcc
+CFLAGS := -o
+TARGET := hwtest
+TFTPBOOT := /tftpboot
+DOCOPY := cp $(TARGET) $(TFTPBOOT)
+COPYTOTEST := cp $(TARGET) $(TEST_DIR)
+SRC := hwtest.c
+default:
+	$(CC) $(CFLAGS) $(TARGET) $(SRC) -I./include
+	$(DOCOPY)
+	$(COPYTOTEST)
+clean:
+	rm -rf $(TARGET)

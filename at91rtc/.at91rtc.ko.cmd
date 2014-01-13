@@ -1,0 +1,1 @@
+cmd_/mcuzone/work/drivers/at91rtc/at91rtc.ko := arm-none-linux-gnueabi-ld -r  -T /mcuzone/work/linux-2.6.39/scripts/module-common.lds --build-id  -o /mcuzone/work/drivers/at91rtc/at91rtc.ko /mcuzone/work/drivers/at91rtc/at91rtc.o /mcuzone/work/drivers/at91rtc/at91rtc.mod.o

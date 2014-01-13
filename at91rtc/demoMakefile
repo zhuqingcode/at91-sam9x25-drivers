@@ -1,0 +1,13 @@
+MOUNT_DIR:=/home/Mount/AT91
+CC := arm-none-linux-gnueabi-gcc
+CFLAGS := -o
+TARGET := rtc_demo
+TFTPBOOT := /tftpboot
+DOCOPY := cp $(TARGET) $(MOUNT_DIR)
+SRC := rtc_demo.c
+default:
+	$(CC) $(CFLAGS) $(TARGET) $(SRC)
+	$(DOCOPY)
+	$(COPYTOTEST)
+clean:
+	rm -rf $(TARGET)

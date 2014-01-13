@@ -1,0 +1,16 @@
+KERNEL_DIR:=/mcuzone/work/linux-2.6.39
+LINUX_DIR:=$(KERNEL_DIR)/include/linux
+TEST_DIR:=/mcuzone/nfsroot/test
+CC := arm-none-linux-gnueabi-gcc
+CFLAGS := -o
+TARGET := at91gpio_demo
+TFTPBOOT := /tftpboot
+DOCOPY := cp $(TARGET) $(TFTPBOOT)
+COPYTOTEST := cp $(TARGET) $(TEST_DIR)
+SRC := at91gpio_demo.c
+default:
+	$(CC) $(CFLAGS) $(TARGET) $(SRC)
+	$(DOCOPY)
+	$(COPYTOTEST)
+clean:
+	rm -rf $(TARGET)
